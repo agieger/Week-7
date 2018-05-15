@@ -7,7 +7,7 @@ Time spent: 66 hours spent in total
 ## Pentesting Report
 
 1. Unauthenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: 
+  - [ ] Summary: you can input an XSS with a comment
     - Vulnerability types:XSS
     - Tested in version: 4.2
     - Fixed in version: 4.2.1
@@ -16,8 +16,8 @@ Time spent: 66 hours spent in total
            comment with XSS code on wordpress forum, have the admin approve it, then go to the forum and the XSS will pop up 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-2. Authenticated Cross-Site scripting (XSS) in update-core.php
-  - [ ] Summary: 
+2. Authenticated Cross-Site scripting (XSS)
+  - [ ] Summary: there are multiple vulnerabilities in wp-admin/update-core.php You can inject HTML or web script into the names and headers of plugins
     - Vulnerability types: XSS
     - Tested in version:4.2
     - Fixed in version: 4.7.1
@@ -26,12 +26,12 @@ Time spent: 66 hours spent in total
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 3. Authenticated Stored Cross-Site Scripting (XSS)
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+  - [ ] Summary:users who are allowed to post on the site can insert HTML with JavaScript on the page by posting. Some configurations would allow unauthenticated users to post or edit content as well.
+    - Vulnerability types:XSS
+    - Tested in version:4.2
+    - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+  - [ ] Steps to recreate: input XSS code into the page or post using HTML editor. The XSS will execute when an admin views the page
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 
@@ -46,7 +46,6 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
 
 ## License
 
